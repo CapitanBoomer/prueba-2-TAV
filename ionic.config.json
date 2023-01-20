@@ -1,0 +1,7 @@
+{
+  "name": "Diego Muñoz prueba 2 tav",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

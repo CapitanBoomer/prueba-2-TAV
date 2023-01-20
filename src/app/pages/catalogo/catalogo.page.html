@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>catalogo</ion-title>
+    <ion-buttons>
+      <ion-back-button text="Perfil" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" expand="block">anterior</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block">siguiente</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item *ngFor="let prod of servcat.CatDatos?.products" detail="true">
+    <ion-avatar slot="start">
+      <img [src]="prod.images[0]" alt="">
+    </ion-avatar>
+    <ion-label>
+      <h6>{{prod.title}}</h6>
+      <ion-note color="primary">$ {{prod.price}}</ion-note><br>
+      <ion-note color="success">{{prod.discountPercentage}} %</ion-note>
+    </ion-label>
+  </ion-item>
+</ion-content>
